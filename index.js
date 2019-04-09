@@ -36,7 +36,7 @@ const addMarks = (text, mark, times) => {
     newText += mark // too get total mark, calculate from times
   }
 
-  console.log(newText)
+  console.log(newText);
 }
 
 addMarks('Hello', '!', 1) // Hello!
@@ -91,3 +91,45 @@ console.log(substraction);
 console.log(dividation);
 console.log(multiplication);
 console.log(totalAll);
+
+
+//.........................................
+
+function reverseWord(word) {
+
+  let counter = ''
+
+  for (let i = word.length - 1; i >= 0; i--) {
+    counter += word[i]
+  }
+  return counter
+
+
+}
+console.log(reverseWord('ayn NAHILIP apul nagnaj ,9102 lirpA 71'));
+
+
+const pyramid = (num) => {
+
+  for (let i = 0; i <= num; i++) {
+    let count = ''
+    for (let j = num; j >= i; j--) {
+      count += ' '
+    }
+    for (let k = 0; k <= i * 2; k++) {
+      count += k
+    }
+    console.log(count)
+  }
+
+}
+pyramid(3)
+
+
+let convertion = (clock) => {
+  let minute = Math.floor(clock / 60)
+  let second = clock % 60
+  return `${minute} : ${second}`
+
+}
+console.log(convertion(112))
